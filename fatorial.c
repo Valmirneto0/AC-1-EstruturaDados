@@ -1,20 +1,20 @@
 #include <stdio.h>
 
-int fatorial(numero) {
-        int rslt = 1;
-        for (int x = 2; x <= numero; x++){
-            rslt = rslt * x;
-        }
-        return rslt;
+long int fatorial(int n){
+    if (n == 0 || n == 1){
+        return 1;
+    }else{
+        return n * fatorial (n-1);
+    }
     }
 
-int main(){
-    int num;
-    printf("Escreva um número para calcular o fatorial: ");
-    scanf("%d", &num);
-
-    printf("O fatorial de %d é: %d", num, fatorial(num));
-    return 0;
+void main(void){
+    int num = -1;;
+    while (num <0){
+        printf("Entre com um número: ");
+        scanf("%d", &num);
+    }
+    printf("O fatorial de %d é %d\n", num, fatorial(num));
 }
 
 

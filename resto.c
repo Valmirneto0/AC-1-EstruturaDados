@@ -1,23 +1,15 @@
 #include <stdio.h>
-int calcResto(resto,num2){
-    int x = 0;
-    while (x == 0)
-    {
-        resto = resto - num2;
-        if (resto < num2){
-            break;
-        }
-        else{
-            
-        }
+int calcResto(num1,num2){
+    if (num1<num2){
+        return num1;
+    }else{
+        return calcResto(num1-num2,num2);
     }
-    return resto;
 }
 
 int main(){
     int num1, num2;
     int resto = 0;
-    int x = 0;
     printf("Escreva um número: ");
     scanf("%d", &num1);
     printf("Escreva um número para dividir o primeiro: ");

@@ -16,12 +16,11 @@ int pred(int n) {
 }
 
 int soma(int a, int b) {
-    while (b != 0) {
-        int carry = a & b;
-        a = a ^ b;
-        b = carry << 1;
+    if (b == 0){
+        return a;
+    }else{
+        return 1 + soma(a,b - 1);
     }
-    return a;
 }
 
 int main() {
